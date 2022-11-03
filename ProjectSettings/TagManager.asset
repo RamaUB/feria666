@@ -8,11 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - Background
+  - Foreground
   - 
   - 
   - 
@@ -41,12 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Items
-    uniqueID: 3310043051
+  - name: Background
+    uniqueID: 65462613
     locked: 0
-  - name: Collidable
-    uniqueID: 80453069
+  - name: Foreground
+    uniqueID: 263045953
     locked: 0
   - name: Player
-    uniqueID: 3232049321
+    uniqueID: 25974337
     locked: 0
