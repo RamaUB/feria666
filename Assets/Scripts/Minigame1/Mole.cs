@@ -12,6 +12,11 @@ public class Mole : MonoBehaviour
     [SerializeField] private Sprite moleHatCrack;
     [SerializeField] private Sprite moleHatHit;
 
+    //AudioSources asignables
+    [SerializeField] private AudioSource ouch;
+    [SerializeField] private AudioSource crack;
+    [SerializeField] private AudioSource final;
+
     [Header("GameManager")]
     [SerializeField] private GameManager gameManager;
 
@@ -103,6 +108,7 @@ public class Mole : MonoBehaviour
             {
                 case TipoDeMole.Normal:
                     spriteRenderer.sprite = moleHit;
+                    ouch.Play();
                     gameManager.SumaPuntos(moleIndex);
                     StopAllCoroutines();
                     StartCoroutine(HacerDesaparecer());
@@ -111,11 +117,13 @@ public class Mole : MonoBehaviour
                 case TipoDeMole.Duro:
                     if (vidas == 2)
                     {
+                        crack.Play();
                         spriteRenderer.sprite = moleHatCrack;
                         vidas--;
                     } else
                     {
                         spriteRenderer.sprite = moleHatHit;
+                        ouch.Play();
                         gameManager.SumaPuntos(moleIndex);
                         StopAllCoroutines();
                         StartCoroutine(HacerDesaparecer());
@@ -196,6 +204,7 @@ public class Mole : MonoBehaviour
 
     public void FinalizarJuego()
     {
+        final.Play();
         atacable = false;
         StopAllCoroutines();
     }

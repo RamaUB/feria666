@@ -5852,6 +5852,37 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &612512806 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2425853121642871358, guid: 562729fd07c0fec4cae92a0316e04bd8, type: 3}
+  m_PrefabInstance: {fileID: 2425853120989950413}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &612512807
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612512806}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.028447568, y: -0.11777043}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.47, y: 2.71}
+    newSize: {x: 2.47, y: 2.71}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.299315, y: 2.1604047}
+  m_EdgeRadius: 0
 --- !u!1 &1043940339
 GameObject:
   m_ObjectHideFlags: 0

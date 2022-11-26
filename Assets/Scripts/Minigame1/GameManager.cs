@@ -15,7 +15,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI textoPuntaje;
     [SerializeField] private GameObject botonVolver;
 
-
+    [Header("Sonidos")]
+    [SerializeField] private AudioSource errado;
+    [SerializeField] private AudioSource moneda;
 
     // Tiempo de juego.
     private float tiempoInicial = 30f;
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     public void IniciarJuego()
     {
         botonPlay.SetActive(false);
+        botonVolver.SetActive(false);
         textoSinTiempo.SetActive(false);
         gameUI.SetActive(true);
 
@@ -55,12 +58,14 @@ public class GameManager : MonoBehaviour
         puntaje += 1;
         textoPuntaje.text = $"{puntaje}";
         tiempoRestante += 1;
+        moneda.Play();
 
         molesActuales.Remove(moles[moleIndex]);
     }
 
     public void Errados(int moleIndex)
     {
+        errado.Play();
         tiempoRestante -= 2;
         molesActuales.Remove(moles[moleIndex]);
     }
@@ -79,6 +84,7 @@ public class GameManager : MonoBehaviour
         
         jugando = false;
         botonPlay.SetActive(true);
+        botonVolver.SetActive(true);
     }
 
     // Update is called once per frame
