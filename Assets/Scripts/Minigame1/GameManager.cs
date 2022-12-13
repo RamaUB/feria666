@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource errado;
     [SerializeField] private AudioSource moneda;
 
-    [Header("Managers")]
-    [SerializeField] private CoinManager coinManager;
+   // [Header("Managers")]
+   // [SerializeField] private CoinManager coinManager;
 
 
     // Tiempo de juego.
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         tiempoRestante = tiempoInicial;
         puntaje = 0;
         textoPuntaje.text = "0";
-        textoMoneda.text = coinManager.GetCoinCount().ToString();
+        textoMoneda.text = CoinManager.instance.GetCoinCount().ToString();
         jugando = true;
     }
     
@@ -67,8 +67,8 @@ public class GameManager : MonoBehaviour
         moneda.Play();
         if(puntaje % 30 == 0)
         {
-            coinManager.IncrementCoinCount();
-            textoMoneda.text = coinManager.GetCoinCount().ToString();
+            CoinManager.instance.IncrementCoinCount();
+            textoMoneda.text = CoinManager.instance.GetCoinCount().ToString();
         }
 
         molesActuales.Remove(moles[moleIndex]);

@@ -3414,7 +3414,6 @@ MonoBehaviour:
   botonVolver: {fileID: 514117206}
   errado: {fileID: 1565107817}
   moneda: {fileID: 739988596}
-  coinManager: {fileID: 777619170}
 --- !u!4 &2120887078
 Transform:
   m_ObjectHideFlags: 0

@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class CoinManager : MonoBehaviour
 {
-
-    public int coinCount = 0;
+    public static CoinManager instance;
+    public int coinCount;
 
       
     void Awake() 
     { 
-        DontDestroyOnLoad(gameObject); 
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     public void IncrementCoinCount()
