@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject botonPlay;
     [SerializeField] private GameObject gameUI;
     [SerializeField] private GameObject textoSinTiempo;
+    [SerializeField] private GameObject boxTutorial;
     [SerializeField] private TMPro.TextMeshProUGUI textoTiempo;
     [SerializeField] private TMPro.TextMeshProUGUI textoPuntaje;
     [SerializeField] private TMPro.TextMeshProUGUI textoMoneda;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
         botonPlay.SetActive(false);
         botonVolver.SetActive(false);
         textoSinTiempo.SetActive(false);
+        boxTutorial.SetActive(false);
         gameUI.SetActive(true);
 
         for (int i = 0; i <moles.Count; i++)
