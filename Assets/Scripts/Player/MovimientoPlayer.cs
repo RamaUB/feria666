@@ -22,7 +22,9 @@ public class MovimientoPlayer : MonoBehaviour
     {
         currentState = PlayerState.walk;
         animator = GetComponent<Animator>();
-        myRigidBody = GetComponent<Rigidbody2D>();    
+        myRigidBody = GetComponent<Rigidbody2D>();
+        animator.SetFloat("moveX", 0);
+        animator.SetFloat("moveY", -1);
     }
 
     // Update is called once per frame
@@ -74,6 +76,7 @@ public class MovimientoPlayer : MonoBehaviour
     }
     void MoverPlayer()
     {
+        cambio.Normalize();
         myRigidBody.MovePosition(
             transform.position + cambio * velocidad * Time.deltaTime
         );

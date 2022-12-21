@@ -3552,10 +3552,10 @@ TextureImporter:
       name: objects_164
       rect:
         serializedVersion: 2
-        x: 80
+        x: 64
         y: 192
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3594,10 +3594,10 @@ TextureImporter:
       name: objects_166
       rect:
         serializedVersion: 2
-        x: 112
+        x: 96
         y: 192
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3636,10 +3636,10 @@ TextureImporter:
       name: objects_168
       rect:
         serializedVersion: 2
-        x: 144
+        x: 128
         y: 192
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3678,10 +3678,10 @@ TextureImporter:
       name: objects_170
       rect:
         serializedVersion: 2
-        x: 176
+        x: 160
         y: 192
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3720,10 +3720,10 @@ TextureImporter:
       name: objects_172
       rect:
         serializedVersion: 2
-        x: 208
+        x: 192
         y: 192
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7066,7 +7066,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      objects_127: 210441913
+      objects_4: 788366568
       objects_118: -1665059789
       objects_98: 1450067490
       objects_44: 1095627259
@@ -7394,9 +7394,9 @@ TextureImporter:
       objects_111: -434601201
       objects_88: 1387357533
       objects_178: -348978086
-      objects_4: 788366568
-      objects_20: -871811682
+      objects_127: 210441913
       objects_128: -378236047
+      objects_20: -871811682
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
