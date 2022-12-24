@@ -6,6 +6,7 @@ public class Pot : MonoBehaviour
 {
 
     private Animator anim;
+    public GameObject moneda;
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +29,6 @@ public class Pot : MonoBehaviour
     {
         yield return new WaitForSeconds(.3f);
         this.gameObject.SetActive(false);
+        moneda.gameObject.SetActive(true);
     }
 }
