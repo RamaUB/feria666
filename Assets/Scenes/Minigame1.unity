@@ -648,6 +648,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46542f07677ef0d4d9de3b0ba86e7a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPosition: {x: 14, y: 5.4}
+  playerStorage: {fileID: 11400000, guid: 14336119c633721429cd75b1806d5c39, type: 2}
 --- !u!1 &603162009
 GameObject:
   m_ObjectHideFlags: 0

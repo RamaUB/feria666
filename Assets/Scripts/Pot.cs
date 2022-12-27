@@ -23,12 +23,13 @@ public class Pot : MonoBehaviour
     {
         anim.SetBool("smash", true);
         StartCoroutine(breakCo());
+        moneda.gameObject.SetActive(true);
     }
 
     IEnumerator breakCo()
     {
         yield return new WaitForSeconds(.3f);
         this.gameObject.SetActive(false);
-        moneda.gameObject.SetActive(true);
+        
     }
 }

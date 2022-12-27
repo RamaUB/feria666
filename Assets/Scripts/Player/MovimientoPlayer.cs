@@ -18,6 +18,11 @@ public class MovimientoPlayer : MonoBehaviour
     private Rigidbody2D myRigidBody;
     private Vector3 cambio;
     private Animator animator;
+    public FloatValue currentHealth;
+    public Signaler playerHealthSignal;
+    public VectorValue startingPosition;
+
+    [SerializeField] private TMPro.TextMeshProUGUI textoMoneda;
 
     // Start is called before the first frame update
     void Start()
@@ -27,12 +32,14 @@ public class MovimientoPlayer : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         animator.SetFloat("moveX", 0);
         animator.SetFloat("moveY", -1);
+        transform.position = startingPosition.initialValue;
     }
 
     // Update is called once per frame
 
     private void Update()
     {
+        textoMoneda.text = CoinManager.instance.GetCoinCount().ToString();
         if (Input.GetButtonDown("attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
             StartCoroutine(AttackCo());
@@ -84,9 +91,20 @@ public class MovimientoPlayer : MonoBehaviour
         );
     }
 
-    public void Knock(float knockTime)
+    public void Knock(float knockTime, float damage)
     {
-        StartCoroutine(KnockCo(knockTime));
+        currentHealth.RuntimeValue -= damage;
+        playerHealthSignal.Raise();
+
+        if (currentHealth.RuntimeValue > 0) 
+        {
+            StartCoroutine(KnockCo(knockTime));
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+        
     }
 
     private IEnumerator KnockCo(float knockTime)

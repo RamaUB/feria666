@@ -2,19 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Letrero : MonoBehaviour
+public class Salida : MonoBehaviour
 {
-
+    public GameObject andaPaya;
     public GameObject letrero;
     public TMPro.TextMeshProUGUI cuadroTexto;
     public string texto;
     public bool jugadorEnRango;
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && !collision.isTrigger)
+    {        
+        if(collision.gameObject.CompareTag("Player") && !collision.isTrigger)
         {
             jugadorEnRango = true;
+
+            if (CoinManager.instance.GetCoinCount() >= 100)
+            {
+                andaPaya.SetActive(false);
+            }
+            else
+            {
+                andaPaya.SetActive(true);
+                EnRango();
+
+            }
+
+            
+
         }
     }
 
@@ -22,20 +36,20 @@ public class Letrero : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
+            EnRango();
             jugadorEnRango = false;
             letrero.SetActive(false);
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void EnRango()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && jugadorEnRango)
+        if ( jugadorEnRango)
         {
             if (letrero.activeInHierarchy)
             {
                 letrero.SetActive(false);
-            } 
+            }
             else
             {
                 letrero.SetActive(true);
@@ -43,4 +57,5 @@ public class Letrero : MonoBehaviour
             }
         }
     }
+
 }

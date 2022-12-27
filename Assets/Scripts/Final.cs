@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogoNPC : MonoBehaviour
+public class Final : MonoBehaviour
 {
-
-    public GameObject dialogoNpc;
+    public GameObject final;
     public TMPro.TextMeshProUGUI cuadroTexto;
     public string texto;
     public bool jugadorEnRango;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !collision.isTrigger)
+        if (collision.gameObject.CompareTag("Player") && !collision.isTrigger)
         {
             jugadorEnRango = true;
+            EnRango();
+
         }
     }
 
@@ -22,25 +23,25 @@ public class DialogoNPC : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
+            EnRango();
             jugadorEnRango = false;
-            dialogoNpc.SetActive(false);
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void EnRango()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && jugadorEnRango)
+        if (jugadorEnRango)
         {
-            if (dialogoNpc.activeInHierarchy)
+            if (final.activeInHierarchy)
             {
-                dialogoNpc.SetActive(false);
-            } 
+                final.SetActive(false);
+            }
             else
             {
-                dialogoNpc.SetActive(true);
+                final.SetActive(true);
                 cuadroTexto.text = texto;
             }
         }
     }
+
 }

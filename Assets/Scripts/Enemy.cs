@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+    public GameObject premio;
 
 
     private void Awake()
@@ -29,7 +30,9 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if(health <= 0)
         {
+            premio.transform.position = this.transform.position;
             this.gameObject.SetActive(false);
+            premio.SetActive(true);
         }
     }
     public void Knock(Rigidbody2D myRigidbody, float knockTime, float damage)

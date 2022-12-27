@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI textoMoneda;
     [SerializeField] private GameObject botonVolver;
 
+
     [Header("Sonidos")]
     [SerializeField] private AudioSource errado;
     [SerializeField] private AudioSource moneda;
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
     private int puntaje;
     private bool jugando = false;
 
-    
+
     public void IniciarJuego()
     {
         botonPlay.SetActive(false);
@@ -103,6 +104,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        textoMoneda.text = CoinManager.instance.GetCoinCount().ToString();
         if (jugando)
         {
             // actualizar tiempo de juego.

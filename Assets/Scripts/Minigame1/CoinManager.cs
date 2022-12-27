@@ -24,9 +24,9 @@ public class CoinManager : MonoBehaviour
         }
     }
 
-    public void IncrementCoinCount()
+    public void IncrementCoinCount(int cant = 1)
     {
-        coinCount += 1;
+        coinCount += cant;
     }
 
     public int GetCoinCount()
