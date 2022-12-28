@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f46000d224207954dabd51aa0e95a6e3
+guid: 6529fc68d6902354eb8282de5b72ba5d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,112 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: assetfree_0
-      rect:
-        serializedVersion: 2
-        x: 7891
-        y: 5269
-        width: 828
-        height: 339
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 083af1393efd3fd428e51f0cea8c845f
-      internalID: -214546321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: assetfree_1
-      rect:
-        serializedVersion: 2
-        x: 7903
-        y: 3657
-        width: 810
-        height: 348
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2398ae0cc165d83499aabd5623ba2f20
-      internalID: 1982575593
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: assetfree_2
-      rect:
-        serializedVersion: 2
-        x: 6146
-        y: 3262
-        width: 808
-        height: 331
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c4926802632a5a41a8a351e8e1b1324
-      internalID: 651407452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: assetfree_3
-      rect:
-        serializedVersion: 2
-        x: 2345
-        y: 1135
-        width: 1749
-        height: 2108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8be7bad48ce766247b7ece1a40732b51
-      internalID: -924119489
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: assetfree_4
-      rect:
-        serializedVersion: 2
-        x: 7692
-        y: 420
-        width: 1951
-        height: 2146
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9c238681b543c043bcf207076fb3b3a
-      internalID: 690347647
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -219,12 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      assetfree_4: 690347647
-      assetfree_3: -924119489
-      assetfree_2: 651407452
-      assetfree_1: 1982575593
-      assetfree_0: -214546321
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
